@@ -13,7 +13,7 @@
 
 You should provide a https credentials or generate one by Let's Encrypt.
 
-* [Let's Encrypt dns-cloudflare](https://github.com/taichunmin/docker-serveo-server/blob/master/dns-cloudflare/README.md)
+* [Let's Encrypt dns-cloudflare](https://github.com/freefugga/docker-serveo-server/blob/master/dns-cloudflare/README.md)
 
 ## Usage
 
