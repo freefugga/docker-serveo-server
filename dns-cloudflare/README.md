@@ -7,14 +7,19 @@
     cp docker-compose.example.yml docker-compose.yml
     cp cloudflare.example.ini cloudflare.ini
     ```
-2. Edit `cloudflare.ini` with your account login email and api key.
-3. Edit `docker-compose.yml` with your email and your domain.
-4. Set `cloudflare.ini` permission.
+2. Edit `cloudflare.ini` with your cloudflare account Edit DNS and Zone API Token.
+    - To make Edit DNS Zone token, Go to website, and on dashboard, click on Get your API Token, then Click on Create Token -> 'Use template' on Edit zone DNS.
+    - Set Permission Zone - DNS - Edit
+    - Add Permission Zone - Zone - Read
+    - Zone Resources -> Specific to your website domain
+    - And save. Copy the token and save it in cloudflare.ini in  `dns_cloudflare_api_token` field.
+4. Edit `docker-compose.yml` with your email and your domain.
+5. Set `cloudflare.ini` permission.
     ```bash
     chown root:root cloudflare.ini
     chmod 600 cloudflare.ini
     ```
-5. Run docker to get credentials.
+6. Run docker to get credentials.
     ```bash
     sudo docker-compose run --rm certbot
     ```
